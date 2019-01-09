@@ -1,0 +1,26 @@
+<table mdbTable>
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Hotel Name</th>
+      <th scope="col">Room number</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let statistic of statistics">
+      <th scope="row">{{statistic.firstName}}</th>
+      <td>{{statistic.lastName}}</td>
+      <td>{{statistic.email}}</td>
+      <td>{{statistic.hotelName}}</td>
+      <td>{{statistic.roomNumber}}</td>
+      <td>{{statistic.startDate | date:'short'}}</td>
+      <td>{{statistic.endDate | date:'short'}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>
